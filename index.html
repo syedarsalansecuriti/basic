@@ -2,6 +2,24 @@
 <html>
 <head>
 <title>W3.CSS Template</title>
+
+<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-qa.securiti.xyz/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', '2dff0f1b-7fd3-4bfc-accb-5a008a1c3b69');
+	s.setAttribute('data-domain-uuid', '5c643f70-3095-461e-bd69-afc5634690d9');
+	s.setAttribute('data-backend-url', 'https://qa.securiti.xyz');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script>
+
+  <button class="cmp-revoke-consent">Manage Cookie Preferences</button>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
